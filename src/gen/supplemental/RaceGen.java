@@ -6,8 +6,7 @@ import java.util.Random;
 
 public class RaceGen {
     public static Race rollRace() {
-        return Race.Human;
-        /*int r = new Random().nextInt(100) + 1;
+        int r = new Random().nextInt(100) + 1;
         if (r <= 4) {
             return Race.Dragonborn;
         } else if (r <= 13) {
@@ -36,6 +35,6 @@ public class RaceGen {
             return Race.Human;
         } else {
             return Race.Tiefling;
-        }*/
+        }
     }
 }

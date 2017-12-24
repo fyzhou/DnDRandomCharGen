@@ -8,8 +8,7 @@ import java.util.Random;
 
 public class ClassGen {
     public static Class rollClass() {
-        return Class.Rogue;
-        /*switch (new Random().nextInt(12)) {
+        switch (new Random().nextInt(12)) {
             case 0:
                 return Class.Barbarian;
             case 1:
@@ -35,7 +34,7 @@ public class ClassGen {
             case 11:
             default:
                 return Class.Wizard;
-        }*/
+        }
     }
 
     public static List<Class> rollMulticlass(int[] stats, Class c) {

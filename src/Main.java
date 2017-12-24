@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
+    public static void main(String[] args) throws IOException {
         Console console = System.console();
-        if (console == null && !GraphicsEnvironment.isHeadless() && !runningFromIntelliJ()) {
+        if (console == null && !GraphicsEnvironment.isHeadless()) {
             String filename = Main.class.getProtectionDomain().getCodeSource().getLocation().toString().substring(6).replace("%20", " ");
             Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start", "cmd", "/k", "java -jar \"" + filename + "\""}).getOutputStream();
             System.exit(0);
@@ -66,11 +66,6 @@ public class Main {
         if (choice == 'Y') {
             saveToFile(c);
         }
-    }
-
-    private static boolean runningFromIntelliJ() {
-        String classPath = System.getProperty("java.class.path");
-        return classPath.contains("idea_rt.jar");
     }
 
     private static void saveToFile(Character c) {

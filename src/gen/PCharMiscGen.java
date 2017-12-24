@@ -73,8 +73,7 @@ public class PCharMiscGen {
     }
 
     public static Background rollBackground() {
-        return Background.Criminal;
-        /*int r = new Random().nextInt(13);
+        int r = new Random().nextInt(13);
         switch (r) {
             case 0:
                 return Background.Acolyte;
@@ -103,7 +102,7 @@ public class PCharMiscGen {
             case 12:
                 return Background.Urchin;
         }
-        return null;*/
+        return null;
     }
 
     private static int rollStat() {
@@ -116,12 +115,11 @@ public class PCharMiscGen {
     }
 
     public static int[] rollStatArray() {
-        return new int[]{10,15,11,12,11,7};
-        /*int[] temp = new int[6];
+        int[] temp = new int[6];
         for (int i=0;i<6;i++) {
             temp[i]=rollStat();
         }
-        return temp;*/
+        return temp;
     }
 
     public static int rollForAge(Race race) {
